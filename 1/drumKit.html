@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS Drum Kit</title>
+    <link rel="stylesheet" href="drumKit.css">
+</head>
+
+<body>
+    <div class="keys">
+        <div class="container">
+            <p class="intrument"><strong>PIANO</strong></p>
+            <div class="each">
+                <div data-key="81" class="key">
+                    <kbd>Q</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="87" class="key">
+                    <kbd>W</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="69" class="key">
+                    <kbd>E</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="82" class="key">
+                    <kbd>R</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="84" class="key">
+                    <kbd>T</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="90" class="key">
+                    <kbd>Z</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="85" class="key">
+                    <kbd>U</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="73" class="key">
+                    <kbd>I</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="79" class="key">
+                    <kbd>O</kbd>
+                    <span class="sound"></span>
+                </div>
+            </div>
+
+            <p class="intrument"><strong>DRUM</strong></p>
+            <div class="each">
+                <div data-key="65" class="key">
+                    <kbd>A</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="83" class="key">
+                    <kbd>S</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="68" class="key">
+                    <kbd>D</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="70" class="key">
+                    <kbd>F</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="71" class="key">
+                    <kbd>G</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="72" class="key">
+                    <kbd>H</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="74" class="key">
+                    <kbd>J</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="75" class="key">
+                    <kbd>K</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="76" class="key">
+                    <kbd>L</kbd>
+                    <span class="sound"></span>
+                </div>
+            </div>
+
+            <p class="intrument"><strong>GUITAR</strong></p>
+            <div class="each">
+                <div data-key="89" class="key">
+                    <kbd>Y</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="88" class="key">
+                    <kbd>X</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="67" class="key">
+                    <kbd>C</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="86" class="key">
+                    <kbd>V</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="66" class="key">
+                    <kbd>B</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="78" class="key">
+                    <kbd>N</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="77" class="key">
+                    <kbd>M</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="188" class="key">
+                    <kbd>,</kbd>
+                    <span class="sound"></span>
+                </div>
+                <div data-key="190" class="key">
+                    <kbd>.</kbd>
+                    <span class="sound"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- drum sound -->
+    <audio data-key="65" src="sounds/drum/clap.mp3"></audio>
+    <audio data-key="83" src="sounds/drum/hihat.mp3"></audio>
+    <audio data-key="68" src="sounds/drum/kick.mp3"></audio>
+    <audio data-key="70" src="sounds/drum/openhat.mp3"></audio>
+    <audio data-key="71" src="sounds/drum/boom.mp3"></audio>
+    <audio data-key="72" src="sounds/drum/ride.mp3"></audio>
+    <audio data-key="74" src="sounds/drum/snare.mp3"></audio>
+    <audio data-key="75" src="sounds/drum/tom.mp3"></audio>
+    <audio data-key="76" src="sounds/drum/tink.mp3"></audio>
+
+    <!-- piano sound -->
+    <audio data-key="81" src="sounds/piano/7352.mp3"></audio>
+    <audio data-key="87" src="sounds/piano/Bright Piano Chord-13587-Free-Loops.com.mp3"></audio>
+    <audio data-key="69" src="sounds/piano/Piano Key C-2859-Free-Loops.com.mp3"></audio>
+    <audio data-key="82" src="sounds/piano/Kawai_fourth_A_D.mp3"></audio>
+    <audio data-key="84" src="sounds/piano/Kawai_octave_A_A.mp3"></audio>
+    <audio data-key="90" src="sounds/piano/PIANO.mp3"></audio>
+    <audio data-key="85" src="sounds/piano/Piano Key C3-2862-Free-Loops.com.mp3"></audio>
+    <audio data-key="73" src="sounds/piano/Piano Key C5-2868-Free-Loops.com.mp3"></audio>
+    <audio data-key="79" src="sounds/piano/Piano Key C8-2877.mp3"></audio>
+
+    <!-- guitar sound -->
+    <audio data-key="89" src="sounds/guitar/Acoustic Gtr Strum-18720-Free-Loops.com.mp3"></audio>
+    <audio data-key="88" src="sounds/guitar/BWEE.mp3"></audio>
+    <audio data-key="67" src="sounds/guitar/Cut Guitar Hit-1443-Free-Loops.com.mp3"></audio>
+    <audio data-key="86" src="sounds/guitar/Double Bass Guitar-114-Free-Loops.com.mp3"></audio>
+    <audio data-key="66" src="sounds/guitar/Guitar Hit-20793-Free-Loops.com.mp3"></audio>
+    <audio data-key="78" src="sounds/guitar/Guitar Muted Fret-20103-Free-Loops.com.mp3"></audio>
+    <audio data-key="77" src="sounds/guitar/Guitar String Hit-1539-Free-Loops.com.mp3"></audio>
+    <audio data-key="188" src="sounds/guitar/cmajopen.mp3"></audio>
+    <audio data-key="190" src="sounds/guitar/quantum_drive.mp3"></audio>
+
+    <!-- guitar sound 
+    <audio data-key="65" src="sounds/drum/clap.mp3"></audio>
+    <audio data-key="83" src="sounds/drum/hihat.mp3"></audio>
+    <audio data-key="68" src="sounds/drum/kick.mp3"></audio>
+    <audio data-key="70" src="sounds/drum/openhat.mp3"></audio>
+    <audio data-key="71" src="sounds/drum/boom.mp3"></audio>
+    <audio data-key="72" src="sounds/drum/ride.mp3"></audio>
+    <audio data-key="74" src="sounds/drum/snare.mp3"></audio>
+    <audio data-key="75" src="sounds/drum/tom.mp3"></audio>
+    <audio data-key="76" src="sounds/drum/tink.mp3"></audio>
+    -->
+
+    <script>
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform') return;
+            e.target.classList.remove('playing');
+        }
+
+        function playSound(e) {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+            if (!audio) return;  // stop the fucntion from running all together 
+
+            key.classList.add('playing');
+            audio.currentTime = 0;  // rewind to the start 
+            audio.play();
+        }
+
+        const keys = Array.from(document.querySelectorAll('.key'));
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+        window.addEventListener('keydown', playSound);
+
+    </script>
+
+
+</body>
+
+</html>
